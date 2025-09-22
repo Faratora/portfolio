@@ -1,17 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 
-:root {
-  --font-s-basic: clamp(1rem, 2vw, 16px); /* от 16px до 24px */
-  --font-s-title: clamp(1.5rem, 4vw, 3rem); /* от 24px до 48px */
-  --container-padding: 2vw;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
-  font-size: var(--font-s-basic);
+  font-size: 16px;
+  font-style: normal;
 }
 ul {
   list-style: none;
@@ -20,18 +20,16 @@ ul {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  
-  box-sizing: border-box;
   background-color: #222222;
   color: #fff;
  
   
 }
 .header-nav{
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  justify-items: end;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
 }
 .header-nav__list {
   display: flex;
@@ -39,20 +37,171 @@ ul {
   list-style: none;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: var(--font-s-basic);
-  
   gap: 40px; /* расстояние между элементами */
-  padding: 0 20px; /* отступы слева и справа */
+  /* padding: 0 20px; отступы слева и справа */
 }
 .header-nav__item a {
   color: #ffffff; /* белый текст */
   text-decoration: none; /* убрать подчеркивание ссылок */
 }
-
+.header-nav__item a:hover {
+  color: #FFD700;
+}
 .logo {
   display: flex;
   align-items: center;
   padding-left: 20px;
 }
 
+/* section */
+.hero-block {
+  display: grid;
+  grid-template-columns: 60px minmax(300px, 740px) minmax(150px, 220px) minmax(200px, 280px);
+  gap: 40px;
+  
+  color: #fff;
+  position: relative;
+}
 
+.hero-block__vertical-wrapper {
+  /* ширина нужна, чтобы не обрезалось */
+}
+.vertical-text {
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  margin-bottom: 12px;
+}
+.top-label {
+  margin-bottom: 12px;
+}
+
+.bottom-label {
+  margin-top: 12px;
+}
+.vertical-combo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center;
+  /* отступ между текстом и вертикальной линией */
+  margin-top: 130px;
+}
+.vertical-line {
+  width: 1px;
+  height: 536px;
+  background-color: #FFF;
+  margin-top: 65px; /* отступ между текстом и вертикальной линией */
+}
+
+
+/* блок статистика */
+
+.hero-block__stats {
+  display: flex;
+  width: 341px;
+  gap: 60px;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stats-number {
+  font-weight: 300;
+  display: flex;
+font-size: 48px;
+line-height: 54px; /* 112.5% */
+text-transform: uppercase;
+  margin: 0;
+  padding-top: 160px;
+}
+
+.stats-number--highlight {
+
+
+
+
+}
+
+.stats-label {
+font-family: Mulish;
+font-weight: 400;
+line-height: 24px;
+padding-left: 30px;
+margin-top: 8px;
+white-space: nowrap;
+}
+
+.hero-block__title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 116px;
+  line-height: 132px; /* 113.793% */
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.hero-block__tagline {
+  font-size: 20px;
+font-weight: 400;
+line-height: 28px; /* 140% */
+text-transform: uppercase;
+padding-bottom: 160px;
+margin-bottom: 0;
+}
+
+.hero-block__scroll {
+  opacity: 0.6;
+  font-family: Mulish;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px; /* 150% */
+padding-bottom: 60px;
+margin: 0;
+padding-left: 5px;
+}
+
+.hero-block__left {
+  
+}
+
+.hero-block__center {
+ 
+}
+
+.hero-block__img-bottom{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.hero-block__centre {
+  display: grid;
+  place-items: center;
+}
+.hero-block__right {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: grid;
+
+}
+.hero-block__intro{
+  display: flex;
+align-items: flex-end;
+
+  text-align: right;
+font-family: Mulish;
+padding-left: 60px;
+font-weight: 400;
+line-height: 24px;
+
+}
+
+/* section about */
