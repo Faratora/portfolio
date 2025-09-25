@@ -360,3 +360,149 @@ padding-top: 217px;
 padding-bottom: 55px;
 }
 
+/* section Packages & Pricing*/
+.pricing-section {
+  margin-left: 20px;
+}
+
+.pricing-header {
+  max-width: 800px;
+}
+.pricing-title {
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+.pricing-subtitle {
+  font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+margin-top: 12px;
+padding-left: 20px;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.pricing-card {
+display: flex;
+width: 320px;
+height: 500px;
+padding: 24px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+border: 1px solid #222;
+}
+.pricing-card__wrapper{
+  /* padding: 24px; */
+  /* margin: 24px; */
+}
+.package-name {
+  font-family: Oswald;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+text-transform: uppercase;
+}
+
+.package-features {
+  font-family: Mulish;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+ list-style-type: square;
+ padding-left: 15px;
+margin-bottom: 7px;
+  margin-top: 12px;
+}
+ul li::before {
+  content: ""; /* или ▪, ⬛ */
+  margin-right: -20px; /* ← расстояние между маркером и текстом */
+  display: inline-block;
+  width: 1em; /* можно настроить ширину */
+  color: #fff;
+}
+
+.package-features li {
+  margin-bottom: 4px;
+}
+
+.package-price {
+  
+}
+
+.package-note {
+  
+  font-family: Mulish;
+font-size: 16px;
+font-style: italic;
+font-weight: 400;
+line-height: 20px; /* 125% */
+  /* padding-top: 145px; */
+  margin-bottom: 10px;
+}
+.cart-two{
+  /* padding-top: 65px; */
+}
+.cart-three{
+  /* padding-top: 35px; */
+}
+.cart-four{
+  /* padding-top: 35px; */
+}
+button{
+  font-family: Oswald;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 24px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 200px;
+padding: 0 20px;
+justify-content: center;
+
+align-self: stretch;
+}
+.package-button {
+  width: 272px;
+  
+}
+
+.package-button:hover {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.pricing-card__wrapper {
+  display: flex;
+  flex-direction: column;       /* элементы идут сверху вниз */
+  justify-content: space-between; /* верхние прижаты к верху, нижние к низу */
+  height: 100%;                 /* важно: чтобы карточка имела высоту */
+}
+
+.package-bottom {
+  margin-top: auto;             /* прижимает блок к низу */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;      /* текст и кнопка по левому краю */
+ 
+}
+
+
+
