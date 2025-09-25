@@ -29,14 +29,22 @@ a {
   
 }
 /* nav */
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+
+
 .header-nav{
   color: #ffffff; /* белый текст */
 }
-.header-nav__container{
+.header{
   margin: 0 auto;
   background-color: #222222;
 }
-.header-naw__row{
+.header-nav__container{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +53,7 @@ a {
   row-gap: 20px;
   flex-wrap: wrap;
   height: 60px;
+  
   }
   .logo{
     padding-right: 20px;
@@ -56,8 +65,14 @@ a {
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  font-family: Oswald;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+text-transform: uppercase;
   list-style: none;/* убрать тоску рядом ссылкой*/
-  column-gap: 40px;
+  /* column-gap: 40px; */
 }
 
 
@@ -758,3 +773,28 @@ text-transform: uppercase;
 .contact-links a:hover{
   color: #d61212;
 }
+
+
+/* бургер меню */
+
+
+
+
+
+@media (max-width: 768px){
+ 
+.menu {
+        position: absolute;
+        right: -740px;
+        top: 0;
+        width: 768px;
+        padding: 75px 20px 20px 20px;
+        /*wцвет меню бургера*/
+        background-color: #222222;
+        visibility: hidden;
+        transition: transform .5s, visibility .5s;
+        will-change: transform;
+    }
+  }
+
+/* бургер меню */
