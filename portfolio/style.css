@@ -221,7 +221,7 @@ padding-left: 5px;
 }
 
 .hero-block__scroll a:hover {
-  color: #FF3C3C;; /* красный Scroll down при наведении */
+  color: #FF3C3C; /* красный Scroll down при наведении */
 }
 
 .image-hover {
@@ -432,6 +432,10 @@ justify-content: space-between;
 align-items: flex-start;
 border: 1px solid #222;
 }
+.pricing-card:hover {
+  border-color: #FF3C3C;
+}
+
 .pricing-card__wrapper{
   /* padding: 24px; */
   /* margin: 24px; */
@@ -551,6 +555,10 @@ align-self: stretch;
   margin: 0 0 20px 0; /* отступ снизу для текста */
   
 }
+.faq-list summary:hover {
+  color: #d61212; /* красный при наведении */
+}
+
 
 .faq-list details {
   border-bottom: 0 solid #fff; /* разделительная линия */
