@@ -726,6 +726,11 @@ margin: 0 auto;
   align-items: center;
 }
 
+input:hover {
+  border-color: #d61212; /* красная рамка при наведении */
+  
+}
+
 /* <!-- Контакты --> */
 
 .contact-links{
@@ -749,4 +754,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
 text-transform: uppercase;
+}
+.contact-links a:hover{
+  color: #d61212;
 }
