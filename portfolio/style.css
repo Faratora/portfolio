@@ -54,6 +54,7 @@ html, body {
   column-gap: 40px;
 }
 
+
 .header-nav__list a {
   color: #fff; /* начальный цвет */
   text-decoration: none;
@@ -63,6 +64,7 @@ html, body {
 .header-nav__list a:hover {
   color: #FF3C3C;; /* красный при наведении */
 }
+
 
 
 
@@ -99,8 +101,29 @@ transform: rotate(-90deg); */
   white-space: nowrap;
   writing-mode: vertical-lr;
   transform: rotate(180deg); 
+
+ 
+  
+  
+  
+  
+  
+  /* padding-bottom: 0px;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-right: 10px; */
+}
+.top-label {
+  
+  
 }
 
+.bottom-label {
+  
+}
+.vertical-combo {
+  
+}
 .vertical-line {
   width: 1px;
   height: 536px;
@@ -108,6 +131,7 @@ transform: rotate(-90deg); */
   margin-top: 12px; /* отступ между текстом и вертикальной линией */
   margin-bottom: 12px;
 }
+
 
 /* блок статистика */
 
@@ -186,35 +210,19 @@ line-height: 24px; /* 150% */
 padding-bottom: 60px;
 margin: 0;
 padding-left: 5px;
-display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-
-.scroll-arrow {
-  transition: filter 0.3s ease;
+.hero-block__left {
+  
 }
 
-
-
-.hero-block__scroll:hover {
-  color: #d61212;
+.hero-block__center {
+ 
 }
 
-.hero-block__scroll:hover .scroll-arrow {
-  filter: drop-shadow(5px 5px 10px #d61212);
-}
-
-.hero-block__scroll:hover {
-  color: #d61212; /* красный при наведении */
-}
-.hero-block__scroll:hover .scroll-arrow {
-  transform: translateY(4px); /* лёгкое движение стрелки вниз */
-  transition: transform 0.3s ease;
+.hero-block__img-bottom{
+  /* padding-top: 60px;
+  padding-bottom: 60px; */
 }
 .hero-block__centre {
   display: grid;
@@ -306,6 +314,7 @@ font-weight: 400;
 line-height: 24px; /
 }
 
+
 /* section portfolio */
 
 /*  */
@@ -313,6 +322,7 @@ line-height: 24px; /
   
 
 }
+
 
 
 .portfolio-wrapper {
@@ -398,15 +408,6 @@ justify-content: space-between;
 align-items: flex-start;
 border: 1px solid #222;
 }
-
-.pricing-card:hover {
-  border-color: #d61212; /* красная рамка при наведении */
-}
-
-
-
-
-
 .pricing-card__wrapper{
   /* padding: 24px; */
   /* margin: 24px; */
@@ -500,6 +501,7 @@ align-self: stretch;
   height: 100%;                 /* важно: чтобы карточка имела высоту */
 }
 
+
 .package-bottom {
   margin-top: auto;             /* прижимает блок к низу */
   display: flex;
@@ -571,6 +573,7 @@ line-height: 24px; /* 150% */
 margin-top: 12px;
 }
 
+
 details {
   border-bottom: 1px solid #fff;
   
@@ -609,6 +612,7 @@ summary {
   list-style: none;
   padding-top: 0;
 }
+
 
 
 summary::after {
@@ -657,8 +661,7 @@ padding-top: 20px;
   color: #fff;
   font-family: 'Mulish', sans-serif;
 }
-.status-item:hover {
-  border-color: #d61212;}
+
 .signup-form form {
   display: flex;
   justify-content: center;
@@ -715,4 +718,3 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 text-transform: uppercase;
 }
-
