@@ -1,125 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon.ico">
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <!-- Header  -->
-<div class="container-wrapper">
-  <header class="header">
-    
-<nav class="header-nav container">
-  <div class="logo" >
-        <a  href="#">
-          <img src="assets/svg/icon-logo.svg" alt="Logo"></a>
-          <h1 class="logo-title"></h1> 
-        
-        <div class="header-nav__wrapper">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <!-- Header  -->
+  <div class="container"><!-- обертка header-->
+    <nav class="header-nav">
+      <div class="header-nav__container">
+        <div class="header-naw__row">
+          <div class="logo">
+            <a href="#">
+              <img src="assets/svg/icon-logo.svg" alt="Logo" />
+              <h1 class="logo-title">Vera Photography</h1>
+            </a>
+          </div>
           <ul class="header-nav__list">
             <li class="header-nav__item"><a href="#about">About me</a></li>
-            <li class="header-nav__item"><a href="#portfolio">Portfolio</a></li>
+            <li class="header-nav__item">
+              <a href="#portfolio">Portfolio</a>
+            </li>
             <li class="header-nav__item"><a href="#price">price</a></li>
             <li class="header-nav__item"><a href="#faq">faq</a></li>
             <li class="header-nav__item"><a href="#contacts">contacts</a></li>
-
           </ul>
-
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
+    <!-- Section mainProfessional Photographer -->
 
-<!-- Section Professional Photographer -->
+    <main class="hero-block__container"> <!-- обертка всего блока -->
+      
 
-<section class="hero-block">
-
-<div class="hero-block__vertical-wrapper">
-
-
-
-          <div class="vertical-combo">
+<div class="hero-block__vertical">
+        <div class="hero-block__vertical-wrap">
+          
             <div class="vertical-text top-label">Best Photographer by MAX</div>
-        <div class="vertical-line"></div>
-          </div>
 
+          <div class="vertical-line"></div>
           <div class="vertical-text bottom-label">2025</div>
-
-</div>
-
-
-  <div class="hero-block__left">
-
-      <div class="hero-block__stats ">
-  <div class="stats-item">
-    <p class="stats-number stats-number--highlight">+ 487</p>
-    <p class="stats-label">Photo sessions</p>
-  </div>
-  <div class="stats-item">
-    <p class="stats-number">+ 356</p>
-    <p class="stats-label">Satisfied clients</p>
-  </div>
-</div>
+        </div>
+      </div>
 
 
-  <h2 class="hero-block__title">Professional Photographer</h2>
-    <p class="hero-block__tagline">Capture the moment. Tell your story.</p>
-    <p class="hero-block__scroll">
-      <span> Scroll down</span>
-      <img src="assets/svg/arrow-down.svg" alt="Arrow down" class="scroll-arrow"></p>
-</div>
 
+<!-- блок статистики -->
 
-  <div class="hero-block__centre">
-    
-    <img src="assets/img/landscape.jpg" alt="Landscape" class="hero-block__img-bottom">
-    
-  </div>
-<div class="hero-block__right">
-  <img src="assets/img/portrait.jpg" alt="Portrait" class="hero-block__img-top"> 
-<div class="hero-block__intro">
-      Hi! I’m Vera, a photographer.<br>
-      For me, photography is more than just an image.
+      <div class="hero-block__left">
+
+<section class="stats-section">
+  <div class="stats-wrapper">
+    <div class="stats-item">
+      <div class="stats-row">
+        <span class="stats-plus">+</span>
+        <div class="stats-col">
+          <span class="stats-number">487</span>
+          <span class="stats-label">Photo sessions</span>
+        </div>
+      </div>
     </div>
 
-</div>
-</section>
-
-<section class="about-section">
-  <div class="about-grid">
-    
-    <!-- Левая колонка -->
-    <div class="about-column about-left">
-      <img src="assets/img/about_img1.jpg" alt="Portrait" class="about-img img1">
-      <h2 class="about-title">About Me</h2>
-      <p class="about-text column-left">
-        Hi! I’m Vera, a photographer with 5 years of experience. For me, photography is more than just an image. It’s a way to feel the moment, capture the atmosphere, and freeze time. I work with people, stories, and emotions.
-      </p>
+    <div class="stats-item">
+      <div class="stats-row">
+        <span class="stats-plus">+</span>
+        <div class="stats-col">
+          <span class="stats-number">356</span>
+          <span class="stats-label">Satisfied clients</span>
+        </div>
+      </div>
     </div>
-
-    <!-- Центральная колонка -->
-    <div class="about-column about-center">
-      <p class="about-text column-center">
-        I shoot all across Europe. I love natural light, genuine emotions, and beautiful details. Each shot is a small piece of art. My goal is to create timeless images that tell your unique story.
-      </p>
-      <img src="assets/img/about_img2.jpg" alt="Black and white portrait" class="about-img img2">
-    </div>
-
-    <!-- Правая колонка -->
-    <div class="about-column about-right">
-      <img src="assets/img/about_img3.jpg" alt="Side portrait" class="about-img img3">
-      <p class="about-caption column-left">Seeing with heart. Shooting with soul.</p>
-    </div>
-
   </div>
 </section>
 
+        <h2 class="hero-block__title">Professional Photographer</h2>
+        <p class="hero-block__tagline">
+          Capture the moment. Tell your story.
+        </p>
+        <p class="hero-block__scroll">
+          <span> Scroll down</span>
+          <img src="assets/svg/arrow-down.svg" alt="Arrow down" class="scroll-arrow" />
+        </p>
+      </div>
 
-</div>
+      <div class="hero-block__centre">
+        <img src="assets/img/landscape.jpg" alt="Landscape" class="hero-block__img-bottom" />
+      </div>
 
-<script src="script.js" defer></script>
-  </body>
-</html>
+      <div class="hero-block__right">
+        <img src="assets/img/portrait.jpg" alt="Portrait" class="hero-block__img-top" />
+        <div class="hero-block__intro">
+          Hi! I’m Vera, a photographer.<br />
+          For me, photography is more than just an image.
+        </div>
+      </div>
+
+    </main>
+
+    <!-- section about me -->
+
+    <section class="about-section">
+      <div class="about-grid">
+        <!-- Левая колонка -->
+        <div class="about-column about-left">
+          <img src="assets/img/about_img1.jpg" alt="Portrait" class="about-img img1" />
+          <h2 class="about-title" id="about">About Me</h2>
+          <p class="about-text column-left">
+            Hi! I’m Vera, a photographer with 5 years of experience. For me,
+            photography is more than just an image. It’s a way to feel the
+            moment, capture the atmosphere, and freeze time. I work with
+            people, stories, and emotions.
+          </p>
+        </div>
+
+        <!-- Центральная колонка -->
+        <div class="about-column about-center">
+          <p class="about-text column-center">
+            I shoot all across Europe. I love natural light, genuine emotions,
+            and beautiful details. Each shot is a small piece of art. My goal
+            is to create timeless images that tell your unique story.
+          </p>
+          <img src="assets/img/about_img2.jpg" alt="Black and white portrait" class="about-img img2" />
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="about-column about-right">
+          <img src="assets/img/about_img3.jpg" alt="Side portrait" class="about-img img3" />
+          <p class="about-caption column-left">
+            Seeing with heart. Shooting with soul.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section portfolio -------------------------------------->
+    <section class="portfolio-section" id="portfolio">
+      <div class="portfolio-wrapper">
+        <!-- Левая часть: текст -->
+        <div class="portfolio-text">
+          <h2 class="portfolio-title">MY PORTFOLIO</h2>
+          <p class="portfolio-description">
+            Every shoot is a story. Here you’ll find portraits, love stories,
+            family sessions, and more.
+          </p>
+        </div>
+
+        <!-- Вертикальная линия -->
+        <div class="portfolio-divider"></div>
+
+        <!-- Правая часть: галерея -->
+        <div class="portfolio-gallery">
+          <div class="gallery-item slide-first">
+            <img src="assets/img/slider1.jpg" alt="Couple 1" />
+          </div>
+          <div class="gallery-item slide-second">
+            <img src="assets/img/slider2.jpg" alt="Couple 2" />
+          </div>
+          <div class="gallery-item slide-third">
+            <img src="assets/img/slider3.jpg" alt="Couple 3" />
+          </div>
+          <div class="gallery-item slide-fourth">
+            <img src="assets/img/slider4.jpg" alt="Couple 4" />
+          </div>
+          <div class="gallery-item slide-fifth">
+            <img src="assets/img/slider5.jpg" alt="Couple 5" />
+          </div>
+          <div class="gallery-item slide-sixth">
+            <img src="assets/img/slider6.jpg" alt="Couple 6" />
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
