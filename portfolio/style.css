@@ -99,29 +99,8 @@ transform: rotate(-90deg); */
   white-space: nowrap;
   writing-mode: vertical-lr;
   transform: rotate(180deg); 
-
- 
-  
-  
-  
-  
-  
-  /* padding-bottom: 0px;
-  margin-left: auto;
-  margin-top: 60px;
-  margin-right: 10px; */
-}
-.top-label {
-  
-  
 }
 
-.bottom-label {
-  
-}
-.vertical-combo {
-  
-}
 .vertical-line {
   width: 1px;
   height: 536px;
@@ -207,19 +186,35 @@ line-height: 24px; /* 150% */
 padding-bottom: 60px;
 margin: 0;
 padding-left: 5px;
+display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.hero-block__left {
-  
+
+.scroll-arrow {
+  transition: filter 0.3s ease;
 }
 
-.hero-block__center {
- 
+
+
+.hero-block__scroll:hover {
+  color: #d61212;
 }
 
-.hero-block__img-bottom{
-  /* padding-top: 60px;
-  padding-bottom: 60px; */
+.hero-block__scroll:hover .scroll-arrow {
+  filter: drop-shadow(5px 5px 10px #d61212);
+}
+
+.hero-block__scroll:hover {
+  color: #d61212; /* красный при наведении */
+}
+.hero-block__scroll:hover .scroll-arrow {
+  transform: translateY(4px); /* лёгкое движение стрелки вниз */
+  transition: transform 0.3s ease;
 }
 .hero-block__centre {
   display: grid;
@@ -403,6 +398,15 @@ justify-content: space-between;
 align-items: flex-start;
 border: 1px solid #222;
 }
+
+.pricing-card:hover {
+  border-color: #d61212; /* красная рамка при наведении */
+}
+
+
+
+
+
 .pricing-card__wrapper{
   /* padding: 24px; */
   /* margin: 24px; */
@@ -504,5 +508,211 @@ align-self: stretch;
  
 }
 
+/* section faq*/
 
+.faq-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  background-color: #222;
+  color:#FFF;
+  padding: 60px 20px;
+  height: 724px;
+}
+.faq-list {
+  max-width: 680px;   /* ширина всего списка */
+  margin: 0 auto;     /* центрирование по странице */
+  margin: 0 0 20px 0; /* отступ снизу для текста */
+  
+}
+
+.faq-list details {
+  border-bottom: 0 solid #fff; /* разделительная линия */
+  margin-bottom: 0;           /* расстояние между вопросами */
+}
+
+.faq-list summary {
+  display: flex;
+  align-items: center;   /* выравнивание текста и иконки по центру */
+  justify-content: space-between;
+  height: 64px;          /* фиксированная высота строки */
+  padding: 0 0;          /* можно добавить боковые отступы */
+  gap: 20px;             /* расстояние между текстом и иконкой */
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  list-style: none;      /* убираем стандартный маркер */
+}
+
+.faq-text {
+  
+}
+
+.faq-section {
+  background-color: #111;
+  color: #fff;
+}
+
+.faq-title {
+  font-size: 32px;
+font-weight: 400;
+line-height: 40px; /* 125% */
+text-transform: uppercase;
+
+}
+
+.faq-subtitle {
+  font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+margin-top: 12px;
+}
+
+details {
+  border-bottom: 1px solid #fff;
+  
+  cursor: pointer;
+  
+  
+}
+details p {
+font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+/* padding-top: 18px; */
+padding-bottom: 18px;/* поднять верх ; */
+}
+
+details:first-child {
+  /* padding-top: 17px; */
+}
+details:not(:first-child) {
+  /* padding: 40px 0; */
+ 
+}
+
+summary {
+  display: flex;
+  align-items: center; /* ← выравнивание по вертикали */
+  justify-content: space-between; /* текст слева, + справа */
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+  padding-top: 0;
+}
+
+
+summary::after {
+  content: url("assets/svg/plus.svg"); /* путь к картинке */
+  display: inline-block;
+  width: 23px;
+  height: 25px;
+  margin-left: 8px; /* отступ от текста */
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  content: url("assets/svg/minus.svg"); /* другая картинка при открытии */
+}
+
+/* <!-- Форма записи --> */
+.signup-form {
+  text-align: center;
+  background-color: #FFF;
+  color: #222;
+  padding-top: 20px;
+  
+}
+.signup-title {
+  font-family: Oswald;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+text-transform: uppercase;
+padding-top: 20px;
+}
+.status-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 8px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-family: 'Mulish', sans-serif;
+}
+.status-item:hover {
+  border-color: #d61212;}
+.signup-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.signup-form input {
+  width: 380px;
+  padding: 0 12px;
+  font-size: 1rem;
+  font-family: Oswald;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+text-transform: uppercase;
+padding: 15px 10px;
+margin: 0 auto;
+}
+
+.signup-form button {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* <!-- Контакты --> */
+
+.contact-links{
+  padding: 20px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#FFF;
+  gap:40px;
+  height: 100px;
+
+}
+
+.contact-links a {
+  color: #ffffff; /* белый текст у ссылки*/
+  text-decoration: none; /* убрать подчеркивание ссылок */
+  font-family: Oswald;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+text-transform: uppercase;
+}
 
