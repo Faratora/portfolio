@@ -1,36 +1,59 @@
 // бургер меню
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('burger').addEventListener("click", function () {
-        document.querySelector('.header').classList.toggle('open')
-    })
-})
+// бургер меню
 
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".header");
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+    const links = document.querySelectorAll(".header-nav__link");
 
-// Закрыть меню при нажатии на Esc
-window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        // Действие при клике
-        document.querySelector('.header').classList.remove('open')
-    }
+    // Открыть/закрыть меню
+    burger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        header.classList.toggle("open");
+        document.body.classList.toggle("lock", header.classList.contains("open"));
+    });
+
+    // Клик по ссылке — плавное закрытие и скролл
+    links.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const target = document.getElementById(targetId);
+
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+
+            header.classList.remove("open");
+            document.body.classList.remove("lock");
+        });
+    });
+
+    // Закрыть меню при нажатии Esc
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            header.classList.remove("open");
+            document.body.classList.remove("lock");
+        }
+    });
+
+    // Закрывает меню при клике
+    menu.addEventListener("click", (e) => e.stopPropagation());
+
+    // Закрывает меню при клике вне его
+    document.body.addEventListener("click", () => {
+        header.classList.remove("open");
+        document.body.classList.remove("lock");
+    });
 });
 
-// Закрыть меню при клике вне его
-document.getElementById('menu').addEventListener('click', event => {
-    event._isClickWithInMenu = true;
-});
-document.getElementById('burger').addEventListener('click', event => {
-    event._isClickWithInMenu = true;
-});
-document.body.addEventListener('click', event => {
-    if (event._isClickWithInMenu) return;
-    // Действие при клике
-    document.querySelector('.header').classList.remove('open')
-});
 
 
 
- // FAQ ACCORDEON — раскрытие одного вопроса за раз + сохранение состояния
+
+ // FAQ ACCORDION — раскрытие одного вопроса за раз + сохранение состояния
 document.addEventListener('DOMContentLoaded', function () {
   const allDetails = document.querySelectorAll('.faq-list details');
 
