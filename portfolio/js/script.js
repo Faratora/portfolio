@@ -1,7 +1,5 @@
 // бургер меню
 
-// бургер меню
-
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".header");
     const burger = document.getElementById("burger");
@@ -89,6 +87,30 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// модальное окно
+const modal = document.querySelector(".modal-container");
+const openBtns = document.querySelectorAll(".package-button"); // все кнопки
+const closeBtn = document.getElementById("closeModal");
+const modalBox = document.querySelector(".modal__box");
 
+// открыть по любой кнопке
+openBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden"; // блокируем прокрутку
+    });
+});
 
+// закрыть по крестику
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = ""; // возвращаем прокрутку
+});
 
+// закрыть по клику вне окна
+modal.addEventListener("click", e => {
+  if (!modalBox.contains(e.target)) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+});
