@@ -1329,18 +1329,10 @@ input:hover {
     max-width: 380px;
   }
   /*burger menu media 380px start*/
-  
+
     .header-nav {
       right: 0;
-
     }
-
-
-
-
-
-    
-
   /* section about */
   .about-img {
     width: 340px;
@@ -1369,6 +1361,35 @@ input:hover {
   font-size: clamp(14px, 2vw, 16px);
   background-color: #222;
 }
+
+
+/* модальное окно */
+.modal__box {
+  max-width: 500px;
+  width: 89%;
+  height: 384px;
+  }
+.modal__close {
+  left: 210px; /* прижимает к левому краю */
+ }
+.modal__title {
+  padding-bottom: 3px;
+  margin: 0;
+}
+.modal__form input {
+  width: 300px;
+}
+.modal__form button {
+  width: 300px;
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+
+
+/* модальное окно */
+
+
   /*  */
 }
 
