@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid #d61212; */
+  /* border: 1px solid #d61212;  */
 }
 
 html,
@@ -13,7 +13,10 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
 }
-
+.wrap-black{
+  background-color: #222222;
+  max-width: 100%;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -320,7 +323,7 @@ nav ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
-  padding: 0 20px;
+  padding: 60px 20px;
   margin-bottom: 60px;
   color: #222222;
 }
@@ -378,46 +381,176 @@ h2 {
 
 /* section portfolio */
 
-/*  */
-.portfolio-wrapper {
+
+/* portfolio section */
+
+
+.portfolio {
   color: #fff;
   background-color: #222222;
-}
-
-.portfolio-title {
-  padding-left: 20px;
   padding-top: 60px;
-  padding-bottom: 12px;
+
 }
 
-.portfolio-description {
-  width: 370px;
-  padding-left: 20px;
-  font-family: Mulish;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  padding-bottom: 20px;
-}
-
-.portfolio-gallery {
+.portfolio__container {
   display: flex;
-  gap: 20px;
-  margin: 20px 0;
+  flex-direction: column;
+  padding-bottom: 0;
 }
 
-.slide-second,
-.slide-fifth {
-  padding-top: 120px;
+.slider-container {
+  width: 100%;
+  padding: 0 0 60px;
 }
 
-.slide-third {
-  padding-top: 217px;
+.portfolio__slider {
+  position: relative;
+  overflow: hidden;
 }
 
-.slide-fifth {
-  padding-bottom: 55px;
+.portfolio__slider-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 654px;
+  transform: translateX(0);
+  transition: transform 0.1s linear; 
+}  
+
+.portfolio__spacer {
+  flex: 0 0 20px;  
+  height: auto;
 }
+
+.portfolio__slider-wrapper.disabled-slider {
+  cursor: default;
+  pointer-events: none; 
+}
+
+.hover-container {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.hover-left { 
+  left: 0; 
+  /* border: 1px solid red; */
+}
+
+.hover-right { 
+  right: 0; 
+  /* border: 1px solid red; */
+} 
+
+.portfolio__container .h2 {
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.portfolio__container p {
+  max-width: 360px;
+  margin-bottom: 40px;
+  font-family: var(--font-family);
+  text-align: left; 
+}
+
+.portfolio__slide {
+  flex-shrink: 0;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+#portfolio__slide1 {
+  align-self: flex-end;
+  width: 400px;
+  height: 534px;
+  background-image: url(assets/img/webp/img-14.webp);
+}
+
+#portfolio__slide2 {
+  align-self: center;
+  width: 220px;
+  height: 220px;
+  background-image: url(assets/img/webp/img-21.webp);
+}
+
+#portfolio__slide3 {
+  width: 280px;
+  height: 374px;
+  margin-top: 120px;
+  background-image: url(assets/img/webp/img-22.webp);
+}
+
+#portfolio__slide4 {
+  align-self: flex-start;
+  width: 400px;
+  height: 534px;
+  background-image: url(assets/img/webp/img-20.webp);
+}
+
+#portfolio__slide5 {
+  width: 280px;
+  height: 374px;
+  margin-top: 120px;
+  background-image: url(assets/img/webp/img-17.webp);
+}
+
+#portfolio__slide6 {
+  align-self: center;
+  width: 220px;
+  height: 220px;
+  background-image: url(assets/img/webp/img-1.webp);
+}
+
+#portfolio__slide7 {
+  align-self: flex-start;
+  width: 280px;
+  height: 374px;
+  background-image: url(assets/img/webp/img-2.webp);
+}
+
+#portfolio__slide8 {
+  align-self: flex-end;
+  width: 400px;
+  height: 534px;
+  background-image: url(assets/img/webp/img-5.webp);
+}
+
+#portfolio__slide9 {
+  align-self: center;
+  width: 220px;
+  height: 220px;
+  background-image: url(assets/img/webp/img-7.webp);
+}
+
+#portfolio__slide10 {
+  align-self: flex-start;
+  width: 280px;
+  height: 374px;
+  background-image: url(assets/img/webp/img-8.webp);
+}
+
+#portfolio__slide11 {
+  width: 280px;
+  height: 374px;
+  margin-top: 120px;
+  background-image: url(assets/img/webp/img-9.webp);
+}
+
+#portfolio__slide12 {
+  align-self: flex-start;
+  margin-right: 0;
+  width: 400px;
+  height: 534px;
+  background-image: url(assets/img/webp/img-12.webp);
+}
+
+
 
 /* section Packages & price*/
 .price-section {
@@ -1201,6 +1334,7 @@ input:hover {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    
   }
   .about-img {
     width: 728px;
