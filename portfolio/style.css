@@ -6,7 +6,9 @@
   box-sizing: border-box;
   /* border: 1px solid #d61212;  */
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   box-sizing: border-box;
@@ -313,6 +315,10 @@ nav ul {
 }
 
 /* section about */
+.arrow-change{
+  transition: transform 0.3s ease;
+}
+
 .about-section {
   background-color: #FFFFFF;
   color: #fff;
