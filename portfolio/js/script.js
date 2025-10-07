@@ -387,13 +387,15 @@ if (isTouchDevice) {
 //   const target = document.querySelector('#about-section');
 //   target.scrollIntoView({ behavior: 'smooth' });
 // });
+
+
 document.querySelector('.arrow-change').addEventListener('click', function(e) {
   e.preventDefault();
   const target = document.querySelector('#about-section');
   const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  const duration = 2000; // длительность в миллисекундах (1000 = 1 секунда)
+  const duration = 1000; // длительность в миллисекундах (1000 = 1 секунда)
 
   let startTime = null;
 
