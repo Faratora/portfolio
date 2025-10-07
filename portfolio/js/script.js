@@ -20,14 +20,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetId = link.getAttribute("href").substring(1);
             const target = document.getElementById(targetId);
 
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
-            }
+    //         if (target) {
+    //             target.scrollIntoView({ behavior: "smooth" });
+    //         }
 
-            header.classList.remove("open");
-            document.body.classList.remove("lock");
-        });
-    });
+    //         header.classList.remove("open");
+    //         document.body.classList.remove("lock");
+    //     });
+    // });
+
+// Закрываем меню
+    header.classList.remove("open");
+    document.body.classList.remove("lock");
+
+    // ⏳ Задержка перед скроллом (в мс)
+    setTimeout(() => {
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300); // подстрой под длительность анимации закрытия меню
+  });
+});
+
+
+
+
 
     // Закрыть меню при нажатии Esc
     window.addEventListener("keydown", (e) => {
