@@ -681,11 +681,12 @@ button {
 
 .package-button {
   width: 272px;
+  
 }
 
 .package-button:hover {
   background-color: #e50914;
-  color: #fff;
+  color: #222;
 }
 
 .price-card__wrapper {
