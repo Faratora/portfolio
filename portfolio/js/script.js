@@ -382,6 +382,11 @@ if (isTouchDevice) {
   }, { passive: true });
 }
 
+document.querySelector('.arrow-change').addEventListener('click', function(e) {
+  e.preventDefault();
+  const target = document.querySelector('#about-section');
+  target.scrollIntoView({ behavior: 'smooth' });
+});
 
 
 
